@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula-03</title>
+</head>
+<body>
+
+    <header>
+
+        <section>
+
+            <nav>
+                <button> <a href="/index.html"> Home </a> </button>
+                <details>
+                    <summary>Aulas</summary>   
+                            <ul>
+                                <li>
+                                    <a href="/aula-01/aula01.html">Aula-01- </a>
+                                </li>
+                            </ul>                  
+                </details>
+            </nav>
+
+        </section>
+
+    </header>
+    
+    <main>
+
+        <section>
+
+            <h1>Aula 03 - Condicionais, se acontecer algo fazemos algo</h1>
+
+            <h3>If se uma condição for verdadeira faça isso... seu código</h3>
+            <p>Vamos criar um código para verificar se você é maior de idade</p>
+            <ul>
+                <li><code>let idade = 0;</code></li>
+                <li><code>idade = 19;</code></li>
+                <li><code>if (idade > 18) {console.log(idade, "você é maior de idade")} // se idade eh maior que 18</code></li>
+                <li><code>else {console.log(idade, "você é de menor"} // se nao for executa essa linha</code></li>
+            </ul>   
+            
+            <H4>Tipos de Condicionais</H4>
+            <li>== igual *cuidado para não usar o = sozinho, senão você está atribuindo um valor a variável</li>
+            <li> < menor</li>
+            <li> > maior</li>
+            <li> <> diferente</li>
+            <li> != ou <= maior ou igual e menor ou igual</li>
+
+            <h3>Diferenças entre o == e o ===</h3>
+            <p>Vamos supor que você quer comparar a idade de alguem é igual a 20</p>
+            <ul>
+                <li><code>let idade = 30;</code></li>
+                <li><code>idade = "20"; // Observe que colocamos um string no lugar do numeral 20</code></li>
+                <li><code>if (idade2 == 20){console.log(idade2,"sua idade é 20 anos")}; // repare que ele mostrou o código mesmo tendo uma string</code></li>  
+            </ul>
+            <p>Para resolver isso temos o === onde ele é usado para ser mais restritivo. Repita o código acima mas usando o === e verifique se vai entrar na condição do seu IF</p>
+
+            <h3>Multi condicionais varios If na mesma logica</h3>
+            <p>vamos somar as idades 1 e 2 com condicões dentro do mesmo if</p>
+            <ul>
+                <li><code>idade2 = 15; // atribui 15 a idade2</code></li>
+                <li><code>idade3 = 58; // atribui 58 a idade3</code></li>
+                <li><code>resultado = idade2 + idade3; // resultado armazena a soma de idade2 e 3</code></li>  
+                <li><code>if(resultado >= 18)   {if (resultado < 60){       // repare que um if está dentro do outro</code></li>
+                <li><code>console.log(resultado, "somando as idades você é um adulto") }} // repare que cada chave fecha um if</code></li>
+            </ul>
+
+            <h3>Multi condicionais com AND e OR</h3>
+            <p>Agora vamos usar o if e gerar condicionais de and e or dentro de um único IF</p>
+            <ul>
+                <li><code>idade2 = 10; // atribui 10 a idade2</code></li>
+                <li><code>idade3 = 20; // atribui 20 a idade3</code></li>
+                <li><code>resultado = idade2 + idade3; // resultado recebe a soma das idades</code></li>
+                <li><code> if ((resultado > 18 && resultado < 60) || resultado == 18){    // repare na condição de And e logo após condição de OR, voce pode priorizar as condições colocando um outro (parenteses) </code></li>  
+                <li><code>console.log(resultado, "Resultado indica mais de 18 anos")}</code></li>
+            </ul>
+
+            <h3>Condicional dupla if else</h3>
+            <p>Agora vamos usar o if e gerar um else if para filtrar o código dentro de um único IF</p>
+            <ul>
+                <li><code>idade2 = 60; // atribui 10 a idade2</code></li>
+                <li><code>idade3 = 8; // atribui 8 a idade3</code></li>
+                <li><code>resultado = idade2 + idade3; // resultado recebe a soma das idades</code></li>
+                <li><code>if (resultado < 18){    // Abrimos o IF mestre e a chave </code></li>  
+                <li><code>console.log("Você é de menor") // se o primeiro if ja for atendido ja exibe esse resultado</code></li>
+                    <li><code>} else if (resultado >= 18 && resultado < 60){  // fechamos a chave do primeir if e criamos um else if (ou se) minha verificação</code></li>  
+                    <li><code>console.log("Você é de menor") // se o esse else if ja for atendido exibe esse resultado</code></li>
+                    <li><code>else if (resultado > 60){  // fechamos a chave do primeir if e criamos um else if (ou se) minha verificação</code></li>  
+                        <li><code>console.log("Você está idoso") // se o último else if for atendido exibe esse resultado</code></li>
+            </ul>
+
+       </section>
+
+    </main>
+
+    <script src="/aula-03/script.js"></script>
+
+</body>
+</html>

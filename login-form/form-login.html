@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br ">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Login</title>
+    <link rel="stylesheet" href="style.css">                
+</head>
+
+<body>
+
+    <header>
+
+
+    </header>
+
+    <main>
+
+        <form>
+
+            <h1>Entre na plataforma</h1>
+
+            <section class="inputsContainer">
+
+                
+                <div class="mailContainer">
+
+                    <label for="typeMail">  Insira seu e-mail   </label>
+                    <input type="email" name="typeMail" placeholder="example@mail.com" class="inputMail" required>
+                
+                </div>
+
+                <div class="passwordContainer">
+
+                    <label for="typePassword">  Digite sua senha    </label>
+                    <input type="password" name="typePassword" id="passwordField" class="inputPassword" placeholder="********" required>
+                    <span class="material-symbols-outlined" id="eye" onclick="showPassword()">visibility</span>
+                    <span class="material-symbols-outlined" id="noEye" onclick="showPassword()">visibility_off</span>                        
+                    <a href="#"> Ih esqueci minha senha!</a>
+
+                </div>
+
+                <div class="inputSupport">
+
+                    <input type="checkbox" name="checkBox1" id="teste">
+                    <label for="checkBox1"> Lembre-se de mim por 30 dias    </label>
+             
+                </div>
+
+                <div class="buttons">
+
+                    <button type="submit" class="btnFilled" id="btn-login">Entrar</button>
+                    <button type="submit" class="btnOutliner" id="btn-create">Criar conta</button>
+                
+                </div>
+            
+            </section>
+
+                <section class="linksContainer">
+                    
+                    <h3>Autentique minha conta com o Google ou meu celular</h3>
+
+                    <div class="roundedIcon">
+
+                        <span class="material-symbols-outlined">qr_code_scanner</span>
+                        <span class="material-symbols-outlined">fingerprint</span>
+                    
+                    </div>
+                
+                </section>
+
+
+        </form>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+   <script src="script.js">
+
+   </script> 
+</body>
+</html>

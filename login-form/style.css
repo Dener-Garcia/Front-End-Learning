@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inter', sans-serif;
+}
+
+:root{
+    --colorAcentMain: #61DAFB;
+    --colorAcentTransparent: rgba(97, 218, 251, 0.5);
+    --colorBackgroundMain: #1C1C22;
+    --colorBackgroundSecundary: #42404E;
+    --colorTextMain: #FAF9FA;
+    --colorTextSecundary: #DEDDE3;
+    --colorTextTertiary: #8C8A9E;
+    --fontSizeS: 14px;
+    --fontSizeM: 16px;
+    --fontSizeL: 28px;
+
+    
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:var(--colorBackgroundMain);
+}
+
+main h1{
+    color: var(--colorTextMain);
+    font-size: var(--fontSizeL);
+    text-align: center;
+    font-weight: 700;
+}
+
+main h3{
+    color: var(--colorTextSecundary);
+    font-size: var(--fontSizeM);
+}
+
+main form{
+    margin: auto;
+    padding: 32px;
+}
+
+label{
+    font-size: var(--fontSizeS);
+    color: var(--colorTextSecundary);
+}
+
+input{
+    margin-top: 8px;
+    padding: 16px 32px;
+    border-radius: 4px;
+    background-color: var(--colorBackgroundSecundary);
+    color: var(--colorTextTertiary);
+    border: none;
+    outline: 0;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+    font-size: var(--fontSizeM)
+}
+
+input:focus{
+    box-shadow: inset 0px 0px 5px var(--colorAcentTransparent);
+}
+
+.inputsContainer{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mailContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.passwordContainer{
+    position: relative;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.passwordContainer a{
+    margin-top: 16px;
+    text-decoration: underline;
+    font-size: var(--fontSizeS);
+    color: var(--colorTextTertiary);
+    transition: ease-in-out 0.2s;
+}
+
+.passwordContainer a:hover{
+    color: var(--colorAcentMain);
+}
+
+.passwordContainer span{
+    position: absolute;
+    right: 5%;
+    bottom: 45px;
+    color: var(--colorAcentMain);
+    cursor: pointer;
+}
+
+.passwordContainer #noEye{
+    display: none;
+} 
+
+.inputSupport{
+    margin-top: 16px;
+}
+
+.inputSupport label{
+    font-size: var(--fontSizeM);
+}
+
+.buttons{
+    margin-top: 24px;
+    width: 100%;
+    display: flex;
+    gap: 16px;
+}
+
+.btnFilled{
+    width: 50%;
+    background-color: var(--colorAcentMain);
+    border: none;
+    border-radius: 100px;
+    font-size: var(--fontSizeM);
+    font-weight: 700;
+    padding: 16px 32px;
+    transition: ease-in-out 0.2s;
+    cursor: pointer;
+}
+
+.btnFilled:hover{
+    background-color: transparent;
+    border: solid 2px var(--colorAcentMain);
+    color: var(--colorTextMain);
+}
+
+.btnOutliner{
+    width: 50%;
+    background-color: transparent;
+    border: solid 2px var(--colorAcentMain);
+    border-radius: 100px;
+    font-size: var(--fontSizeM);
+    color: var(--colorTextMain);
+    font-weight: 700;
+    padding: 16px 32px;
+    transition: ease-in-out 0.2s;
+    cursor: pointer;
+}
+
+.btnOutliner:hover{
+    background-color: var(--colorAcentMain);
+    color: var(--colorBackgroundMain);
+}
+
+.linksContainer{
+    margin-top: 24px;
+}
+
+.linksContainer .roundedIcon{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.linksContainer span{
+    font-size: 44px;
+    color: var(--colorTextSecundary);
+    background-color: var(--colorBackgroundSecundary);
+    padding: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: ease-in-out 0.1s;
+}
+
+.linksContainer span:hover{
+    outline: solid 2px;
+    outline-color: var(--colorAcentMain);
+    background-color: transparent;
+}
+
+.buttons,
+.linksContainer{
+    animation: fadein linear 0.4s;
+
+}
+
+@keyframes fadein{
+
+    from {
+        transform: translateY(200px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
