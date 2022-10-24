@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1a1a1a;
+}
+
+.centerFullScreen {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #181818;
+}
+
+h1{
+    color: aqua;
+}
+
+ /* ################################# Area de animacoes e svg ################################# */
+
+ /* criando filtro de box shadow para elementos SVG */
+ /* sempre deve ser aplicado ao SVG e nao aos Paths */
+ /* procure por as sombras depois da animação das letras pro exemplo  */
+
+svg{
+    width: 80%;
+    filter: drop-shadow(0px 8px 20px rgba(0, 255, 0, 0))
+        drop-shadow(0px 8px 20px rgba(255, 6, 222, 0));
+    animation: animateShadow 5s ease 0s forwards;
+}
+
+/* criando keyframes para a animação da sombra */
+
+@keyframes animateShadow {
+
+    0%, 20%{
+        filter: drop-shadow(0px 8px 20px rgba(0, 255, 0, 0.0))
+        drop-shadow(0px 8px 20px rgba(255, 6, 222, 0.0));
+    }
+    
+    40%, 50%{
+        filter: drop-shadow(0px 8px 20px rgba(0, 255, 0, 0.7))
+        drop-shadow(0px 8px 20px rgba(255, 6, 222, 0.9));
+    }
+
+    75%{
+        filter: drop-shadow(0px 8px 20px rgba(0, 255, 0, 0.0))
+        drop-shadow(0px 8px 20px rgba(255, 6, 222, 0.0));
+    }
+
+    100%{
+        filter: drop-shadow(0px 8px 20px rgba(0, 255, 0, 0.9))
+        drop-shadow(0px 8px 20px rgba(255, 6, 222, 0.9));
+    }
+}
+
+  /* stroke-dasharray primeira propriedade serve para definir o tamanho do tracejado, a segundo a distancia entre os tracejados*/
+  /* stroke-dashoffset serve para andar como caminho mantendo as mesma configuracoes */
+  /* em animation o forwards apos o delay serve para que quando terminar a animação ela mantem em 100% e desaparece por isso tirei pois quero mante-la */
+
+  #Ellipse1,
+  #Ellipse2,
+  #Ellipse3,
+  #request_quote,
+  #local_shipping,
+  #d3_rotation,
+  #Rectangle38,
+  #Rectangle39{
+    animation: animateStrokes 8s ease 0s forwards;
+}
+
+
+
+ /* criando keyframes para a animação de borda */
+
+@keyframes animateStrokes {
+
+    /* a animação começa sem preenchimento e sem as linhas devido config. da distancia dos pontos */
+
+    0%{
+        fill-opacity: 0;
+        stroke-dasharray: 1 1000;
+        stroke-dashoffset: 0;
+        stroke-width: 0;
+        opacity: 1;
+    }
+    
+    30%{
+        fill-opacity: 0;
+        stroke-dasharray: 150 0;
+        stroke-dashoffset: 0;
+        stroke-width: 1;
+        opacity: 1;
+    }
+
+    60%, 90%{
+        fill-opacity: 1;
+        stroke-dasharray: 150 0;
+        stroke-dashoffset: 0;
+        stroke-width: 0;
+        opacity: 1;
+    }
+
+    100%{
+        fill-opacity: 0;
+        stroke-dasharray: 150 0;
+        stroke-dashoffset: 0;
+        stroke-width: 0;
+        opacity: 0;
+    }
+}
+
+
+
+
+
