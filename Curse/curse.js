@@ -100,3 +100,8 @@ console.log(aula1Img)
 console.log("removendo o atributo de alt criado com o setAttribute")
 aula1Img.removeAttribute("alt", "Criando esse atributo pelo js, nao existia um alt para a image")
 console.log(aula1Img)
+
+// Criando tags no meu documento HTML pelo JS
+
+let link = document.createElement("a");
+link.setAttribute("href")
