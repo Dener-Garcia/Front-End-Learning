@@ -1,0 +1,22 @@
+
+[
+    {
+        "id": 1,
+        "nome" : "Notebook Dell",
+        "quantidade": 5
+    },
+    { 
+        "id": 2,
+        "nome" : "Notebook Acer",
+        "quantidade": 15,
+        "usb-c": false,
+        "objeto dentro de objeto": {
+            "cidade": "Uberlandia",
+            "pais": "Brasil"
+        },
+        "objeto em arrays":[
+            "Uberlandia",
+            "Brasil"
+        ]
+    }
+]

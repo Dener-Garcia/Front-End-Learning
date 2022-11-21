@@ -1,0 +1,28 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.h2MyClass{
+    font-size: 32px;
+}
+
+.box2{
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    margin-top: 44px;
+    background-color: #ea6644;
+}
+
+.btn-blue{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    font-size: 24px;
+    background-color: rgb(119, 119, 250);
+    padding: 32px 16px;
+    transition: 1s;
+}
