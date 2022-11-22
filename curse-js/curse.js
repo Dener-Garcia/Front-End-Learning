@@ -139,23 +139,51 @@ console.info(arrowRetangulo(4,2), "Resultado de calculo area 4 * 2 usando uma co
 // Objetos
 
 console.error("Trabalhando com objetos, para criar basta definir um nome seguido = {} podemos ter propriedades, atributos e ate funcoes")
-var quadrado = {
-    lados: 4, // sempre separe as propriedade com a virgula ,
-    area: function(lado){
-        return lado * lado
+var retangulo = {
+    ladoA: 5, // sempre separe as propriedade com a virgula ,
+    ladoB: 10,
+    area: function(ladoA, ladoB){
+        return ladoA * ladoB;
     },
-    perimetro: function(lado){
-        return 4 * lado
+    perimetro: function(ladoA, ladoB){
+        return (2 * ladoA) + (2 * ladoB);
     }
 };
 
-// acessando as caracteristica de um objeto basta por nove dele seguido de ponto.
+// acessando as caracteristica de um objeto basta por nome dele seguido de ponto.
 console.log("mostrando todas propriedade do objeto quadrado")
-console.info(quadrado.lados)
-console.info(quadrado.area(4), "lembre-se quando eh uma funcao voce deve chamar ela com o () + o valor do parametro no caso 4*4 =16")
-console.info(quadrado.perimetro(4))
+console.info(retangulo.ladoA, retangulo.ladoB)
+console.info(retangulo.area(5,10), "lembre-se quando eh uma funcao voce deve chamar ela com o () + o valor do parametro no caso 4*4 =16")
+console.info(retangulo.perimetro(5,10))
 
 // outra possibilidade de trabalhar com obejtos eh poder referenciar as variavevis das funcoes usando as proprias variaveis definidas dentro do objeto
+
+console.error("Usando a variavel que ja existe dentro do objeto dentro da function usando o this")
+var quadrado = {
+    ladoQuadrado: 4, // sempre separe as propriedade com a virgula ,
+    area: function(){
+        return this.ladoQuadrado * this.ladoQuadrado
+    },
+    perimetro(){ // outra forma de declarar funcao eh tirando o nome da function e colocar somente o () a frente do nome da variavel
+        return this.ladoQuadrado * 4
+    }
+};
+
+// acessando as caracteristica de um objeto basta por nome dele seguido de ponto.
+console.log("mostrando todas propriedade do objeto quadrado")
+console.info(quadrado.ladoQuadrado)
+console.info(quadrado.area(), "Como usei o this nao preciso passar parametros dentro de colchetes")
+console.info(quadrado.perimetro())
+
+// Modificando atributos de uma variavel dentro do objeto acessndo ele com o nomeVariavel.variavel
+
+console.error("trocando o valor de uma variavel acessando ela e passando novos valores")
+retangulo.ladoA = 5;
+console.log(retangulo.ladoA, "atribuindo novo valor de 2 para a var ladoA");
+retangulo.ladoB = 10;
+console.log(retangulo.ladoB, "atribuindo novo valor de 10 para a var ladoB");
+
+console.info(retangulo.area(), "Chamando a funcao area dentro do objeto retangulo.area()");
 
 // vendo atributos de um titulo pelo console log
 
@@ -164,12 +192,12 @@ const tituloAula1 = document.querySelector("h2")
 console.log(tituloAula1.innerHTML)
 console.log(tituloAula1.classList)
 
+
 // Seletores de elementos por id basta por o nome do id da tag
 
 console.log("selecao por id")
 const para2 = document.getElementById("para2")
 console.log(para2)
-
 
 // Seletores de elementos por classe. usando o byclassname nao precisa por o . antes do nome da classe ele retorna um html collection
 
