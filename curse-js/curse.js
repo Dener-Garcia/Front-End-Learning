@@ -177,13 +177,77 @@ console.info(quadrado.perimetro())
 
 // Modificando atributos de uma variavel dentro do objeto acessndo ele com o nomeVariavel.variavel
 
-console.error("trocando o valor de uma variavel acessando ela e passando novos valores")
-retangulo.ladoA = 5;
-console.log(retangulo.ladoA, "atribuindo novo valor de 2 para a var ladoA");
-retangulo.ladoB = 10;
-console.log(retangulo.ladoB, "atribuindo novo valor de 10 para a var ladoB");
+var retangulo2 ={
+    ladoA : 2,
+    ladoB : 2,
+    area2(){
+        return this.ladoA * this.ladoB
+    }
+}
 
-console.info(retangulo.area(), "Chamando a funcao area dentro do objeto retangulo.area()");
+console.error("trocando o valor de uma variavel acessando ela e passando novos valores")
+retangulo2.ladoA = 5;
+console.log(retangulo2.ladoA, "atribuindo novo valor de 2 para a var ladoA");
+retangulo2.ladoB = 10;
+console.log(retangulo2.ladoB, "atribuindo novo valor de 10 para a var ladoB");
+
+console.info(retangulo2.area2(), "Chamando a funcao area dentro do objeto retangulo.area()");
+
+// Arrays
+
+console.error("Trabalhando com arrays")
+let frutas = ["maca", "uva", "banana", "laranja"];
+console.log("acessando terceira posicao de uma array de frutas")
+console.info(frutas[2],"mostrando a terceira posicao, eu poderia ter um array dentro de outro tambem")
+
+console.log("usando o metodo pop() ele remove o ultimo item do array e devolve ele pra voce")
+console.info(frutas.pop("maca"))
+console.log(frutas, "repare que agora ele nao tem mais a laranja dentro do array")
+
+console.log("usando o metodo push() ele adiciona um item na posicao do array")
+console.info(frutas.push('kiwi')) // eh preciso usar aspas simples
+console.log(frutas, "repare que agora tem o kiwi")
+
+// usando for e while para trabalhar com arrays e estruturas de repeticao
+
+console.error("trabalhando com estruturas de repeticao, geralmente se usa 3 parametros no minimo como comeca, como termina como modifica")
+
+for (let index = 0; index <= 7; index++) {
+    const element = frutas[index];
+    console.info("como defini que o index tinha de ser menor que 7 ele rodou 8 vezes ate sair do for")
+    console.log(index) 
+}
+
+console.error("Trabalhando com while")
+let i = 1; // definindo a variavel
+let enabless = false
+
+while (i <= 20) { // definicindo a condicao do loop
+    i ++    // entrando no loop o que vou fazer
+
+    if (enabless = true) { // definindo um if dentro do while
+        console.log(i,"entrou num if dentro de um while e incremento i --")
+        i ++
+    }
+    else {
+        console.log("sai do do if")
+    }
+}
+console.info(i)
+
+// Trabalhando com arrays de forma mais simples
+
+console.error("Trabalhando com arrays junto ao foreach")
+
+let marcas = ["vw", "audi", "renault", "fiat"]
+
+console.log("definindo um forEach e mostrando os item seguido do index e por fim a array toda")
+marcas.forEach(function(item, index, array){ // o forEach percorre todo array de forma automatica ela detem de 3 argumento na function(item, index, array)
+    
+    console.info(item)
+    console.info(index)
+    console.info(array)
+}) 
 
 // vendo atributos de um titulo pelo console log
 
