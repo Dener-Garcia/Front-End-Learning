@@ -26,3 +26,9 @@ body{
     padding: 32px 16px;
     transition: 1s;
 }
+
+.liPersonalizada{
+    list-style: georgian;
+    color: rgb(175, 177, 48);
+    font-size: 18px;
+}

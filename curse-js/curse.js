@@ -235,19 +235,116 @@ while (i <= 20) { // definicindo a condicao do loop
 }
 console.info(i)
 
-// Trabalhando com arrays de forma mais simples
+// Trabalhando com arrays de forma mais simples sem criar estruturas de reptição... com o for each ela simplifica a maniupalação
 
 console.error("Trabalhando com arrays junto ao foreach")
 
 let marcas = ["vw", "audi", "renault", "fiat"]
 
 console.log("definindo um forEach e mostrando os item seguido do index e por fim a array toda")
-marcas.forEach(function(item, index, array){ // o forEach percorre todo array de forma automatica ela detem de 3 argumento na function(item, index, array)
+
+// o forEach percorre todo array de forma automatica ela detem de 3 argumentos mudos na function são eles (item, index, array), porem essa variavel é muda ou seja eu posso trocar os argumentos pela palavra que eu quiser pois  é a posição que influencia, posso trocar item por A, index por B etc.... geralmente precisamos somente do item o valor que tem dentro da array 
+
+marcas.forEach(function(item, index, array){ 
     
-    console.info(item)
-    console.info(index)
-    console.info(array)
+    
+    console.info("mostrando item",item);
+    console.info("mostrando index",index);
+    console.info("mostrando array",array);
 }) 
+
+// outra forma de escrever essa mesma funcao é usando um arrow function, e ainda usar o event dentro do paratenses repare na sintaxe e no uso dos parenteses, como dentro do forEach temos um unico argumento ele vai mostrar pra mim no console.log os itens da array
+
+console.error("Resumindo operacao com for each e escrevendo funcao em 1 linha")
+
+marcas.forEach((event)=>{console.log(event)})
+
+// Trabalhando com o map em arrays
+
+console.error("Usando o map para criar arrays apartir de outro array")
+
+// Criando nova array de carros
+
+const carros = ["polo", "A3", "kwid", "Uno", "bmw m3"]
+
+// criando variavel para pegar essa array e juntar com o outro array anterior atraves do map, coisa que nao eh possivel usando o forEach, com o map eu consigo criar um novo array apartir de outro array
+
+// estou pegando o marcas que eh uma array que ja criei anteriormente e atribuindo a ela o map "marcas.map" e retornado numa arrow function o item e index da array marcas
+
+// estou pegando o item da array de marcas e retornado ele no return, lembre-se que eu chamei ele de item mas poderia ser outro nome "marcas.map((item, index)"
+
+// no return eu estou pegando o item concatenando com o index da array carros e nao mais a array de marcas, ele vai pegar tudo isso e jogar na minha const carrosName criando assim um array novo
+
+const carrosName = marcas.map((item, index)=>{
+    return item + " : " + carros[index]
+})
+console.log("mostrando o array gerado unindo as duas arrays")
+console.info(carrosName)
+
+// Agora usando o forEach nessa nova array carrosName, e estou dando um console log para mostrar o valor de cada item da array e seu index dentro da array
+
+carrosName.forEach((a,b,c)=>{
+    console.log(a,b)
+})
+
+// outro exemplo com o map e arrays, vamos multiplicar os numeros de um arrya por 2
+
+console.error("Outro exemplo de arrays com map")
+
+const numerosArray = [2,4,6,8,10]
+console.info("array base a ser multiplicada", numerosArray)
+const numerosArrayMultiplicado = numerosArray.map(item => item * 2)
+console.log("resultado da nova array criada ja com os numeros multiplicados")
+console.info(numerosArrayMultiplicado)
+
+// trabalhando com arrays final
+
+console.error("Trabalhando com arrays e objetos no JS final")
+
+// criando uma const cheia de objetos
+
+const produtos = [
+    {
+        nomeProduto: "teclado",
+        preco: 400
+    },
+    {
+        nomeProduto: "mouse",
+        preco: 200
+    },
+    {
+        nomeProduto: "webcam",
+        preco: 1000
+    },
+    {
+        nomeProduto: "joystick",
+        preco: 400
+    }
+]
+
+console.log("array de objetos", produtos)
+
+// Descobrindo o valor todal dos produtos acima, primeiro crio uma variavel para receber esse valor
+
+let total = 0;
+
+// usando o map para criar uma arrow function onde pego o preco acessando uma propriedade do objeto e jogo ela somando todos os precos numa variavel total
+
+produtos.map(nomeMudo => total += nomeMudo.preco)
+
+console.info("Soma de todos produtos", total)
+
+// Adicionando uma classe a varios elementos do html, como exemplo os li de uma lista
+
+// criando variavel para pegar a lista direto pela tag li
+
+const listPersonalizada = document.querySelectorAll("li")
+
+// Usando o forEach para adicionar uma nova classe a minha li, isso é muito interessate para pegar por exemplo 200 elementos e personaliza todos da mesma forma
+
+listPersonalizada.forEach((item) => {
+    item.classList.add("liPersonalizada")
+})
 
 // vendo atributos de um titulo pelo console log
 
