@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api-http</title>
+</head>
+<body>
+    <h1>Trabalhando com api e requisições HTTP</h1>
+    <p>HTTP é um canal para receber e enviar arquivos ou dados na web</p>
+    <h2>Métodos do HTTP</h2>
+    <ul>
+        <li>
+            <h3>GET</h3>
+            <p>o Get é o padrão na maioria das vezes, serve para pegar obter as informações de uma url por exemplo como se voce digita-se diretamente no browser</p>
+        </li>
+        <li>
+            <h3>POST</h3>
+            <p>Criar novos usuários e novos registros, exemplo eu pego as informações pelo get altero e envio de volta para cadastrar no back end por exemplo </p>
+        </li>
+        <li>
+            <h3>PUT</h3>
+            <p>Atualizar informações, exemplo tenho usuario de id 70 e troquei esse email, agora preciso enviar pedindo essa troca</p>
+        </li>
+        <li>
+            <h3>DELETE</h3>
+            <p>Serve para deletar informações</p>
+        </li>
+        <li>
+            <h3>HEAD</h3>
+            <p>Serve para puxar o cabeçalho para quando voce precisa dos meta dados (cabeçalho) de algo como o servidor</p>
+        </li>
+    </ul>
+
+    <h2>AJAX</h2>
+    <p>Significa Asynchronous JavaScript e XML, é o uso do objeto XMLHttpRequest para se comunicar com os scripts do lado do servidor atraves de uma API.</p>
+    <p>Em vez de atualizar a pagina para obter novas informaçẽos do servidor (usando F5 por exemplo) dessa forma forçamos o javascript assincrono para atualizar informações sem recarregar a pagina novamente</p>
+
+    <h2>PROMISES</h2>
+    <p>São códigos que não vao influenciar na linha do tmepo do JS, basicamente são funções que vão devolver um resultado de sucesso ou erro</p>
+    <p>Nós quando fazemos uma requisição ela demora um tempo em milisegundos ate a resposta da requisição que pode ter tido resultado positivo ou não</p>
+    <p>Então quando der errado ou certo minha requisição eu posso fazer alguma lógica com isso</p>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
