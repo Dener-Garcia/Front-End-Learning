@@ -74,3 +74,17 @@ minhaPromise()
     console.log(error)
     
 })
+
+// conforme abaixo tudo que fizemos antes podemos resumir com axios de forma simples e da mesma forma .GET, .PUT, .DELETE E .GET
+
+// ele ainda volta um objeto mais completo pois traz ate os meta dados
+
+axios.get("https://api.github.com/users/Kayke-Fujinak")
+.then(function(responseDoAxios){
+    console.log("resultado da Promise assincrona caso de certo com status code 200") 
+    console.log("Trabalhando com AXIOS essa eh a response", responseDoAxios)
+})
+.catch(function(errorDoAxios){
+    console.log("Trabalhando com AXIOS esse eh o erro da requisisao", errorDoAxios) 
+    
+})
